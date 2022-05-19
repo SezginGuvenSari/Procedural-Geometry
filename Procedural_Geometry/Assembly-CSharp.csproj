@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\QuadMesh.cs" />
+    <Compile Include="Assets\Scripts\CubeMesh.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
