@@ -23,14 +23,14 @@ public class CubeMesh : MonoBehaviour
 
         List<Vector3> vertices = new List<Vector3>()
         {
-            new Vector3(-1,1,-1),
-            new Vector3(1,1,-1),
-            new Vector3(-1,-1,-1),
-            new Vector3(1,-1,-1),
-            new Vector3(-1,1,1),
-            new Vector3(1,1,1),
-            new Vector3(-1,-1,1),
-            new Vector3(1,-1,1)
+            new Vector3(-1,1,-1),      //0
+            new Vector3(1,1,-1),      //1
+            new Vector3(-1,-1,-1),   //2
+            new Vector3(1,-1,-1),   //3
+            new Vector3(-1,1,1),   //4
+            new Vector3(1,1,1),   //5
+            new Vector3(-1,-1,1),//6
+            new Vector3(1,-1,1) //7
         };
 
         List<int> trianglesList = new List<int>()
@@ -48,9 +48,31 @@ public class CubeMesh : MonoBehaviour
             7,5,4,
             7,4,6
         };
+
+
         mesh.SetVertices(vertices);
         mesh.SetTriangles(trianglesList, 0);
-    
+
+       
+
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(new Vector3(-1, 1, -1), new Vector3(1, 1, -1));
+        Gizmos.DrawLine(new Vector3(-1, 1, -1), new Vector3(-1,-1, -1));
+        Gizmos.DrawLine(new Vector3(-1, -1, -1), new Vector3(1, -1, -1));
+        Gizmos.DrawLine(new Vector3(1, 1, -1), new Vector3(1, -1, -1));
+        Gizmos.DrawLine(new Vector3(1, -1, -1), new Vector3(1, -1, 1));
+        Gizmos.DrawLine(new Vector3(1, 1, -1), new Vector3(1, 1, 1));
+        Gizmos.DrawLine(new Vector3(1, 1, 1), new Vector3(1, -1, 1));
+        Gizmos.DrawLine(new Vector3(-1, 1, 1), new Vector3(1, 1, 1));
+        Gizmos.DrawLine(new Vector3(-1, -1, 1), new Vector3(1, -1, 1)); 
+        Gizmos.DrawLine(new Vector3(-1, 1, 1), new Vector3(-1, -1, 1));
+        Gizmos.DrawLine(new Vector3(-1, 1, -1), new Vector3(-1, 1, 1));
+        Gizmos.DrawLine(new Vector3(-1, -1, -1), new Vector3(-1, -1, 1));
+
 
     }
 
