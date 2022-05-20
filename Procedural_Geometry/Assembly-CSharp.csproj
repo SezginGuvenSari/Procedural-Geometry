@@ -56,8 +56,11 @@
     <Analyzer Include="D:\VsYeni\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\QuadMesh.cs" />
     <Compile Include="Assets\Scripts\CubeMesh.cs" />
+    <Compile Include="Assets\Scripts\QuadMesh.cs" />
+    <Compile Include="Assets\Scripts\GizmosMn.cs" />
+    <Compile Include="Assets\Scripts\Mathfs.cs" />
+    <Compile Include="Assets\Scripts\QuadRing.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
