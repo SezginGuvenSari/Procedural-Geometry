@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\GizmosMn.cs" />
     <Compile Include="Assets\Scripts\Mathfs.cs" />
     <Compile Include="Assets\Scripts\QuadRing.cs" />
+    <Compile Include="Assets\Scripts\TriangularPrism.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
