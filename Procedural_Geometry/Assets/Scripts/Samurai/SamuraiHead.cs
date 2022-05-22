@@ -6,12 +6,12 @@ using UnityEngine;
 public class SamuraiHead : MonoBehaviour
 {
     Mesh mesh;
-    public LineRenderer circleRend;
+   
     private void Awake()
     {
         mesh = new Mesh();
         mesh.name = "Samurai Head";
-        DrawCircle(100,1);
+      
         GetComponent<MeshFilter>().sharedMesh = mesh;
     }
 
@@ -48,26 +48,39 @@ public class SamuraiHead : MonoBehaviour
 
     }
 
-   
 
-     public void DrawCircle(int steps,int radius)
+    private void OnDrawGizmos()
     {
-        circleRend.positionCount = steps;
+        //First Cube Line
+        Gizmos.DrawLine(new Vector3(3, 0, 0), new Vector3(4, 0, 0));
+        Gizmos.DrawLine(new Vector3(3, 0, 0), new Vector3(3, 1, 0));
+        Gizmos.DrawLine(new Vector3(4, 0, 0), new Vector3(4, 1, 0));
+        Gizmos.DrawLine(new Vector3(3, 1, 0), new Vector3(4, 1, 0));
+        Gizmos.DrawLine(new Vector3(4, 0, 0), new Vector3(4, 0, 1));
+        Gizmos.DrawLine(new Vector3(3, 0, 0), new Vector3(3, 0, 1));
+        Gizmos.DrawLine(new Vector3(4, 0, 1), new Vector3(4, 1, 1));
+        Gizmos.DrawLine(new Vector3(3, 0, 1), new Vector3(3, 1, 1));
+        Gizmos.DrawLine(new Vector3(3, 0, 1), new Vector3(4, 0, 1));
+        Gizmos.DrawLine(new Vector3(3, 1, 1), new Vector3(4, 1, 1));
+        Gizmos.DrawLine(new Vector3(3, 1, 0), new Vector3(3, 1, 1));
+        Gizmos.DrawLine(new Vector3(4, 1, 0), new Vector3(4, 1, 1));
 
-        for (int currentStep = 0; currentStep < steps; currentStep++)
-        {
-            float circumferenceProgress = (float)currentStep /steps;
-            float currentRadian = circumferenceProgress * 2 * Mathf.PI;
+        // Second Cube Line
+        Gizmos.DrawLine(new Vector3(-4, 0, 0), new Vector3(-3, 0, 0)); ;//3==-4 , 4=-3
+        Gizmos.DrawLine(new Vector3(-4, 0, 0), new Vector3(-4, 1, 0));
+        Gizmos.DrawLine(new Vector3(-3, 0, 0), new Vector3(-3, 1, 0));
+        Gizmos.DrawLine(new Vector3(-4, 1, 0), new Vector3(-3, 1, 0));
+        Gizmos.DrawLine(new Vector3(-3, 0, 0), new Vector3(-3, 0, 1));
+        Gizmos.DrawLine(new Vector3(-4, 0, 0), new Vector3(-4, 0, 1));
+        Gizmos.DrawLine(new Vector3(-3, 0, 1), new Vector3(-3, 1, 1));
+        Gizmos.DrawLine(new Vector3(-4, 0, 1), new Vector3(-4, 1, 1));
+        Gizmos.DrawLine(new Vector3(-4, 0, 1), new Vector3(-3, 0, 1));
+        Gizmos.DrawLine(new Vector3(-4, 1, 1), new Vector3(-3, 1, 1));
+        Gizmos.DrawLine(new Vector3(-4, 1, 0), new Vector3(-4, 1, 1));
+        Gizmos.DrawLine(new Vector3(-3, 1, 0), new Vector3(-3, 1, 1));
 
-            float xScaled = Mathf.Cos(currentRadian);
-            float yScaled = Mathf.Sin(currentRadian);
-            float x = xScaled + radius;
-            float y = yScaled + radius;
 
-            Vector3 currentPosition = new Vector3(x, y, 0);
-
-            circleRend.SetPosition(currentStep, currentPosition);
-
-        }
     }
+
+
 }
