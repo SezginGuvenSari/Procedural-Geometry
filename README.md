@@ -15,13 +15,12 @@
 ---
 <img src="Procedural_Geometry\Recordings/6.png" width="525" height="1080" />
 <img src="Procedural_Geometry\Recordings/7.png" width="525" height="1080" />
----
 
 **Procedural Samurai Mesh**
 ---
 <img src="Procedural_Geometry\Recordings/1.png" width="525" height="1080" />
 <img src="Procedural_Geometry\Recordings/4.png" width="525" height="1080" />
 
-* ![Alt-Text](Procedural_Geometry\Recordings/gif_animation_005.gif)
+ ![Alt-Text](Procedural_Geometry\Recordings/gif_animation_005.gif)
 
 ---
